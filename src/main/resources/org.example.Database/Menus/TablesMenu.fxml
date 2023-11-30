@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.MenuControllers.TablesMenuController">
+   <Button fx:id="goodsButton" layoutX="55.0" layoutY="59.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Goods">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="workersButton" layoutX="353.0" layoutY="59.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Workers">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="contractsButton" layoutX="55.0" layoutY="169.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Contracts">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="makersButton" layoutX="353.0" layoutY="169.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Makers">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="lawyersButton" layoutX="55.0" layoutY="273.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Lawyers">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="lawfirmsButton" layoutX="353.0" layoutY="273.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="200.0" text="Lawfirms">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+   <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" textAlignment="CENTER" />
+</AnchorPane>

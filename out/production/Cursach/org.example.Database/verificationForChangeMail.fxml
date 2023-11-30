@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="200.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.CursachN1.verificationForChangeMailControl">
+    <PasswordField fx:id="passwordField" layoutX="81.0" layoutY="121.0" />
+    <Label layoutX="91.0" layoutY="94.0" text="Enter your password:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="Back" />
+    <TextField fx:id="loginField" layoutX="82.0" layoutY="66.0" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="39.0" text="Enter your login:" textAlignment="CENTER">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Button fx:id="verificationButton" layoutX="106.0" layoutY="153.0" mnemonicParsing="false" onAction="#verification" text="Verification">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Button>
+    <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="14.0" prefHeight="27.0" prefWidth="207.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+</AnchorPane>
