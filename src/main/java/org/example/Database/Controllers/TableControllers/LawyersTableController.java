@@ -51,8 +51,6 @@ public class LawyersTableController implements Initializable {
     private TextField fioField;
     @FXML
     private TextField phoneField;
-    @FXML
-    private TextField yearsField;
 
     private final DatabaseHandler databaseHandler = new DatabaseHandler();
     private final ResultSet lawyers = databaseHandler.selectLawyers();
