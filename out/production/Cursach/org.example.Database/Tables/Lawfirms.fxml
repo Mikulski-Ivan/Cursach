@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="366.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.ContractsTableController">
+<AnchorPane prefHeight="366.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.LawfirmsTableController">
     <TextField fx:id="nameField" layoutX="197.0" layoutY="292.0" prefWidth="110.4000244140625" />
     <TextField fx:id="phoneField" layoutX="308.0" layoutY="292.0" prefWidth="147.20001220703125" />
     <Button fx:id="addButton" disable="true" layoutX="546.0" layoutY="292.0" mnemonicParsing="false" text="Add" />
