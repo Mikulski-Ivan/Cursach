@@ -97,6 +97,8 @@ public class MakersTableController implements Initializable {
             }
         });
 
+        makersTable.setItems(data);
+
         FilteredList<MakerTable> filteredList=new FilteredList<>(data, b->true);
         AtomicReference<String> firmString=new AtomicReference<>("");
         AtomicReference<String> reputationString=new AtomicReference<>("");

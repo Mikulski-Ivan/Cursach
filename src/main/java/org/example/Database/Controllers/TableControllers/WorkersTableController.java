@@ -3,21 +3,18 @@ package org.example.Database.Controllers.TableControllers;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.example.Database.Classes.ClassesForDatabase.Tables.MakerTable;
 import org.example.Database.Classes.ClassesForDatabase.Tables.WorkerTable;
 import org.example.Database.Classes.HandlerClasses.DatabaseHandler;
-import org.w3c.dom.css.CSSStyleRule;
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.ResourceBundle;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class WorkersTableController implements Initializable {
 
@@ -88,14 +85,14 @@ public class WorkersTableController implements Initializable {
             throw new RuntimeException(e);
         }
 
-        idWorkersColumn.setCellValueFactory(new PropertyValueFactory("idWorkers"));
-        workersFIOColumn.setCellValueFactory(new PropertyValueFactory("FIO"));
-        workersAddressColumn.setCellValueFactory(new PropertyValueFactory("address"));
-        workerPositionColumn.setCellValueFactory(new PropertyValueFactory("workerPosition"));
-        salaryColumn.setCellValueFactory(new PropertyValueFactory("salary"));
-        ratingColumn.setCellValueFactory(new PropertyValueFactory("rating"));
-        workersPhoneColumn.setCellValueFactory(new PropertyValueFactory("phone"));
-        experienceColumn.setCellValueFactory(new PropertyValueFactory("experience"));
+        idWorkersColumn.setCellValueFactory(new PropertyValueFactory<>("idWorkers"));
+        workersFIOColumn.setCellValueFactory(new PropertyValueFactory<>("FIO"));
+        workersAddressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        workerPositionColumn.setCellValueFactory(new PropertyValueFactory<>("workerPosition"));
+        salaryColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        ratingColumn.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        workersPhoneColumn.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        experienceColumn.setCellValueFactory(new PropertyValueFactory<>("experience"));
         deleteColumn.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         deleteColumn.setCellFactory(param -> new TableCell<>(){
             private final Button deleteButton=new Button("Delete");
@@ -117,6 +114,8 @@ public class WorkersTableController implements Initializable {
                 });
             }
         });
+
+        workersTable.setItems(data);
 
         /*FilteredList<WorkerTable> filteredList=new FilteredList<>(data, b->true);
         AtomicReference<String> firmString=new AtomicReference<>("");

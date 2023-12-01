@@ -84,4 +84,18 @@ public class WorkerTable {
     public void setExperience(int experience) {
         this.experience = experience;
     }
+
+    @Override
+    public String toString() {
+        return "WorkerTable{" +
+                "idWorkers=" + idWorkers +
+                ", FIO='" + FIO + '\'' +
+                ", address='" + address + '\'' +
+                ", workerPosition='" + workerPosition + '\'' +
+                ", salary=" + salary +
+                ", rating=" + rating +
+                ", phone='" + phone + '\'' +
+                ", experience=" + experience +
+                '}';
+    }
 }

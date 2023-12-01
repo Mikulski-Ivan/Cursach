@@ -98,6 +98,8 @@ public class LawfirmsTableController implements Initializable {
             }
         });
 
+        lawfirmsTable.setItems(data);
+
         /*FilteredList<WorkerTable> filteredList=new FilteredList<>(data, b->true);
         AtomicReference<String> firmString=new AtomicReference<>("");
         AtomicReference<String> reputationString=new AtomicReference<>("");
