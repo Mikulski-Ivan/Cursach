@@ -8,10 +8,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.example.Database.Classes.ClassesForDatabase.Tables.LawfirmTable;
 import org.example.Database.Classes.ClassesForDatabase.Tables.MakerTable;
 import org.example.Database.Classes.ClassesForDatabase.Tables.WorkerTable;
 import org.example.Database.Classes.HandlerClasses.DatabaseHandler;
+import org.example.Database.Enums.EnumsForFX.Scenes;
 import org.w3c.dom.css.CSSStyleRule;
 
 import java.net.URL;
@@ -32,7 +34,7 @@ public class LawfirmsTableController implements Initializable {
     private TableColumn<LawfirmTable, String> firmNameColumn;
 
     @FXML
-    private TableView<LawfirmTable> lawfirmsTable;
+    private TableView<LawfirmTable> lawFirmsTable;
 
     @FXML
     private TableColumn<LawfirmTable, String> lawFirmsPhoneColumn;
@@ -61,6 +63,11 @@ public class LawfirmsTableController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        backButton.setOnAction(actionEvent -> {
+            Scenes.TABLES_MENU.setScene((Stage) backButton.getScene().getWindow());
+        });
+
         try {
             while (lawfirms.next()) {
                 data.add(new LawfirmTable(lawfirms.getInt(1),
@@ -98,7 +105,7 @@ public class LawfirmsTableController implements Initializable {
             }
         });
 
-        lawfirmsTable.setItems(data);
+        lawFirmsTable.setItems(data);
 
         /*FilteredList<WorkerTable> filteredList=new FilteredList<>(data, b->true);
         AtomicReference<String> firmString=new AtomicReference<>("");

@@ -8,11 +8,13 @@ import javafx.beans.property.ReadOnlyObjectWrapper;
         import javafx.fxml.Initializable;
         import javafx.scene.control.*;
         import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.example.Database.Classes.ClassesForDatabase.Tables.ContractTable;
 import org.example.Database.Classes.ClassesForDatabase.Tables.MakerTable;
         import org.example.Database.Classes.ClassesForDatabase.Tables.WorkerTable;
         import org.example.Database.Classes.HandlerClasses.DatabaseHandler;
-        import org.w3c.dom.css.CSSStyleRule;
+import org.example.Database.Enums.EnumsForFX.Scenes;
+import org.w3c.dom.css.CSSStyleRule;
 
         import java.net.URL;
 import java.sql.Date;
@@ -73,6 +75,11 @@ public class ContractsTableController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        backButton.setOnAction(actionEvent -> {
+            Scenes.TABLES_MENU.setScene((Stage) backButton.getScene().getWindow());
+        });
+
         try {
             while (contracts.next()) {
                 data.add(new ContractTable(contracts.getInt(1),

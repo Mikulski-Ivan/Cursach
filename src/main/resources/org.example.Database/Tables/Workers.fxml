@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.WorkersTableController">
    <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-   <TableView fx:id="workersTable" layoutY="81.0" prefHeight="55.0" prefWidth="745.0">
+   <TableView fx:id="workersTable" layoutX="10.0" layoutY="70.0" prefHeight="200.0" prefWidth="745.0">
       <columns>
          <TableColumn fx:id="idWorkersColumn" prefWidth="93.125" text="idWorkers" />
          <TableColumn fx:id="workersFIOColumn" prefWidth="80.80005645751953" text="FIO" />
@@ -21,9 +21,9 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="58.40004882812502" text="delete" />
       </columns>
    </TableView>
-   <TextField fx:id="fioField" layoutX="213.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField fx:id="addressField" layoutX="398.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
-   <Button fx:id="addButton" disable="true" layoutX="725.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
+   <TextField fx:id="fioField" layoutX="150.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="addressField" layoutX="333.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
+   <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
    <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" text="Rst" />
-   <TextField fx:id="positionField" layoutX="582.0" layoutY="304.0" prefHeight="26.0" prefWidth="145.0" />
+   <TextField fx:id="positionField" layoutX="516.0" layoutY="305.0" prefHeight="26.0" prefWidth="145.0" />
 </AnchorPane>

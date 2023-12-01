@@ -143,7 +143,7 @@ public class DatabaseHandler {
     }
 
     public void deleteGood(GoodTable goodTable) {
-        comandString = "DELETE FROM "+ Tables.GOODS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.GOODS.getTitle()+" WHERE idGoods=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(goodTable.getIdGoods()));

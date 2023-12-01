@@ -7,8 +7,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.example.Database.Classes.ClassesForDatabase.Tables.WorkerTable;
 import org.example.Database.Classes.HandlerClasses.DatabaseHandler;
+import org.example.Database.Enums.EnumsForFX.Scenes;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -70,6 +72,11 @@ public class WorkersTableController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        backButton.setOnAction(actionEvent -> {
+            Scenes.TABLES_MENU.setScene((Stage) backButton.getScene().getWindow());
+        });
+
         try {
             while (workers.next()) {
                 data.add(new WorkerTable(workers.getInt(1),

@@ -6,12 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="366.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.MakersTableController">
-    <TextField fx:id="firmField" layoutX="210.0" layoutY="289.0" prefHeight="26.0" prefWidth="184.0" />
-    <Button fx:id="addButton" disable="true" layoutX="722.0" layoutY="289.0" mnemonicParsing="false" text="Add" />
-    <Button fx:id="backButton" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-    <Button fx:id="resetButton" layoutX="22.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" text="Rst" />
-   <TableView fx:id="makersTable" layoutX="22.0" layoutY="56.0" prefHeight="55.0" prefWidth="745.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.MakersTableController">
+    <TextField fx:id="firmField" layoutX="280.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
+    <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
+    <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+    <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" text="Rst" />
+   <TableView fx:id="makersTable" layoutX="10.0" layoutY="70.0" prefHeight="200.0" prefWidth="745.0">
       <columns>
          <TableColumn fx:id="idMakersColumn" prefWidth="186.25" text="idMakers" />
          <TableColumn fx:id="makerFirmColumn" prefWidth="186.25" text="makerFirm" />

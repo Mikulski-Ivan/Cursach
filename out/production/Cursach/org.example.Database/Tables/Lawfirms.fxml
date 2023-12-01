@@ -6,13 +6,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="366.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.LawfirmsTableController">
-    <TextField fx:id="nameField" layoutX="197.0" layoutY="292.0" prefWidth="110.4000244140625" />
-    <TextField fx:id="phoneField" layoutX="308.0" layoutY="292.0" prefWidth="147.20001220703125" />
-    <Button fx:id="addButton" disable="true" layoutX="546.0" layoutY="292.0" mnemonicParsing="false" text="Add" />
-    <Button fx:id="backButton" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-    <Button fx:id="resetButton" layoutX="155.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0" text="Rst" />
-   <TableView fx:id="lawFirmsTable" layoutX="11.0" layoutY="53.0" prefHeight="55.0" prefWidth="745.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.LawfirmsTableController">
+    <TextField fx:id="nameField" layoutX="260.0" layoutY="305.0" prefWidth="110.4000244140625" />
+    <TextField fx:id="phoneField" layoutX="370.0" layoutY="305.0" prefWidth="147.20001220703125" />
+    <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
+    <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+    <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0" text="Rst" />
+   <TableView fx:id="lawFirmsTable" layoutX="10.0" layoutY="70.0" prefHeight="200.0" prefWidth="745.0">
       <columns>
          <TableColumn fx:id="idLawFirmsColumn" prefWidth="159.19997596740723" text="idLawFirms" />
          <TableColumn fx:id="firmNameColumn" prefWidth="184.0" text="firmName" />
