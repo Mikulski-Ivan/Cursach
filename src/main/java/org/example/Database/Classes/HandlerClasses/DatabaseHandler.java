@@ -110,7 +110,7 @@ public class DatabaseHandler {
     }
 
     public void deleteMaker(MakerTable makerTable) {
-        comandString = "DELETE FROM "+ Tables.MAKERS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.MAKERS.getTitle()+" WHERE idMakers=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(makerTable.getIdMakers()));
@@ -121,7 +121,7 @@ public class DatabaseHandler {
     }
 
     public void deleteWorker(WorkerTable workerTable) {
-        comandString = "DELETE FROM "+ Tables.WORKERS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.WORKERS.getTitle()+" WHERE idWorkers=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(workerTable.getIdWorkers()));
@@ -132,7 +132,7 @@ public class DatabaseHandler {
     }
 
     public void deleteContract(ContractTable contractTable) {
-        comandString = "DELETE FROM "+ Tables.CONTRACTS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.CONTRACTS.getTitle()+" WHERE idContracts=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(contractTable.getIdContracts()));
@@ -154,7 +154,7 @@ public class DatabaseHandler {
     }
 
     public void deleteLawyer(LawyerTable lawyerTable) {
-        comandString = "DELETE FROM "+ Tables.LAWYERS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.LAWYERS.getTitle()+" WHERE idLawyers=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(lawyerTable.getIdLawyers()));
@@ -165,7 +165,7 @@ public class DatabaseHandler {
     }
 
     public void deleteLawfirm(LawfirmTable lawfirmTable) {
-        comandString = "DELETE FROM "+ Tables.LAWFIRMS.getTitle()+" WHERE id=?";
+        comandString = "DELETE FROM "+ Tables.LAWFIRMS.getTitle()+" WHERE idLawFirms=?";
         try {
             prSt = getDbConnection().prepareStatement(comandString);
             prSt.setString(1, String.valueOf(lawfirmTable.getIdLawFirms()));

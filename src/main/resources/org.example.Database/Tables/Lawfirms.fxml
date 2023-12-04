@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.LawfirmsTableController">
-    <TextField fx:id="nameField" layoutX="260.0" layoutY="305.0" prefWidth="110.4000244140625" />
-    <TextField fx:id="phoneField" layoutX="370.0" layoutY="305.0" prefWidth="147.20001220703125" />
+    <TextField fx:id="phoneField" layoutX="278.0" layoutY="305.0" prefWidth="211.0" />
+    <TextField fx:id="addressField" layoutX="489.0" layoutY="305.0" prefWidth="211.0" />
     <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
     <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
     <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0" text="Rst" />
@@ -21,4 +21,5 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="68.800048828125" text="delete" />
       </columns>
    </TableView>
+   <TextField fx:id="nameField" layoutX="67.0" layoutY="305.0" prefWidth="211.0" />
 </AnchorPane>

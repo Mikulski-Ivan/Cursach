@@ -21,9 +21,13 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="58.40004882812502" text="delete" />
       </columns>
    </TableView>
-   <TextField fx:id="fioField" layoutX="150.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField fx:id="addressField" layoutX="333.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="fioField" layoutX="65.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
+   <TextField fx:id="addressField" layoutX="156.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
    <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
    <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" text="Rst" />
-   <TextField fx:id="positionField" layoutX="516.0" layoutY="305.0" prefHeight="26.0" prefWidth="145.0" />
+   <TextField fx:id="positionField" layoutX="247.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
+   <TextField fx:id="salaryField" layoutX="337.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
+   <TextField fx:id="ratingField" layoutX="428.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
+   <TextField fx:id="phoneField" layoutX="519.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
+   <TextField fx:id="experienceField" layoutX="610.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.43" />
 </AnchorPane>

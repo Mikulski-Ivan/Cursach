@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.LawyersTableController">
-    <TextField fx:id="fioField" layoutX="260.0" layoutY="305.0" prefWidth="110.4000244140625" />
-    <TextField fx:id="phoneField" layoutX="370.0" layoutY="305.0" prefWidth="147.20001220703125" />
+    <TextField fx:id="fioField" layoutX="63.0" layoutY="305.0" prefWidth="158.25" />
+    <TextField fx:id="phoneField" layoutX="221.0" layoutY="305.0" prefWidth="158.25" />
     <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
     <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
    <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" text="Rst" />
@@ -22,4 +22,6 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="58.40004882812502" text="delete" />
       </columns>
    </TableView>
+   <TextField fx:id="firmField" layoutX="378.0" layoutY="305.0" prefWidth="158.25" />
+   <TextField fx:id="yearsField" layoutX="536.0" layoutY="305.0" prefWidth="162.0" />
 </AnchorPane>
