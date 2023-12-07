@@ -15,6 +15,13 @@ public class LawyerTable {
         this.yearsOfCooperation = yearsOfCooperation;
     }
 
+    public LawyerTable(String FIO, String phone, int idLawFirm, int yearsOfCooperation) {
+        this.FIO = FIO;
+        this.phone = phone;
+        this.idLawFirm = idLawFirm;
+        this.yearsOfCooperation = yearsOfCooperation;
+    }
+
     public int getIdLawyers() {
         return this.idLawyers;
     }

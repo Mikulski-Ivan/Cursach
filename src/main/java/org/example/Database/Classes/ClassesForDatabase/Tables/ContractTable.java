@@ -23,6 +23,15 @@ public class ContractTable {
         this.dateOfSale = dateOfSale;
     }
 
+    public ContractTable(String customer, int quantity, double totalCost, int idGood, int idWorker, int idLawyer, Date dateOfSale) {
+        this.customer = customer;
+        this.quantity = quantity;
+        this.totalCost = totalCost;
+        this.idGood = idGood;
+        this.idWorker = idWorker;
+        this.idLawyer = idLawyer;
+        this.dateOfSale = dateOfSale;
+    }
     public int getIdContracts() {
         return this.idContracts;
     }
@@ -79,7 +88,7 @@ public class ContractTable {
         this.idLawyer = idLawyer;
     }
 
-    public java.util.Date getDateOfSale() {
+    public Date getDateOfSale() {
         return this.dateOfSale;
     }
 

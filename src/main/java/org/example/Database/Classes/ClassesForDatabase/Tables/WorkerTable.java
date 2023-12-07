@@ -21,6 +21,16 @@ public class WorkerTable {
         this.experience = experience;
     }
 
+    public WorkerTable(String FIO, String address, String workerPosition, double salary, double rating, String phone, int experience) {
+        this.FIO = FIO;
+        this.address = address;
+        this.workerPosition = workerPosition;
+        this.salary = salary;
+        this.rating = rating;
+        this.phone = phone;
+        this.experience = experience;
+    }
+
     public int getIdWorkers() {
         return this.idWorkers;
     }

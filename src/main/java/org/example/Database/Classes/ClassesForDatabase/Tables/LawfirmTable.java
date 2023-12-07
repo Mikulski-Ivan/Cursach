@@ -13,6 +13,11 @@ public class LawfirmTable {
         this.address = address;
     }
 
+    public LawfirmTable(String firmName, String phone, String address) {
+        this.firmName = firmName;
+        this.phone = phone;
+        this.address = address;
+    }
     public int getIdLawFirms() {
         return this.idLawFirms;
     }

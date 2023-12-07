@@ -13,6 +13,12 @@ public class MakerTable {
         this.yearsOfCooperation = yearsOfCooperation;
     }
 
+    public MakerTable(String makerFirm, Double reputation, int yearsOfCooperation) {
+        this.makerFirm = makerFirm;
+        this.reputation = reputation;
+        this.yearsOfCooperation = yearsOfCooperation;
+    }
+
     public int getIdMakers() {
         return this.idMakers;
     }

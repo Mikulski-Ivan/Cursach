@@ -15,6 +15,13 @@ public class GoodTable {
         this.leftInStock = leftInStock;
     }
 
+    public GoodTable(String goodsName, double costPerPiece, int idMaker, int leftInStock) {
+        this.goodsName = goodsName;
+        this.costPerPiece = costPerPiece;
+        this.idMaker = idMaker;
+        this.leftInStock = leftInStock;
+    }
+
     public int getIdGoods() {
         return this.idGoods;
     }

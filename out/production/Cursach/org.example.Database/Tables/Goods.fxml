@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Database.Controllers.TableControllers.GoodsTableController">
-    <TextField fx:id="nameField" layoutX="310.0" layoutY="305.0" prefHeight="26.0" prefWidth="141.0" />
+    <TextField fx:id="costField" layoutX="223.0" layoutY="304.0" prefHeight="26.0" prefWidth="158.25" />
     <Button fx:id="addButton" disable="true" layoutX="700.0" layoutY="305.0" mnemonicParsing="false" text="Add" />
     <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
     <Button fx:id="resetButton" layoutX="25.0" layoutY="305.0" mnemonicParsing="false" prefWidth="40.0" text="Rst" />
@@ -21,4 +21,7 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="58.40004882812502" text="delete" />
       </columns>
    </TableView>
+   <TextField fx:id="nameField" layoutX="65.0" layoutY="304.0" prefHeight="26.0" prefWidth="158.25" />
+   <TextField fx:id="makerField" layoutX="383.0" layoutY="304.0" prefHeight="26.0" prefWidth="158.25" />
+   <TextField fx:id="stockField" layoutX="541.0" layoutY="304.0" prefHeight="26.0" prefWidth="158.25" />
 </AnchorPane>

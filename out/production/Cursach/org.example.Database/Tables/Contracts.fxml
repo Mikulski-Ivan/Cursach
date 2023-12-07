@@ -24,5 +24,11 @@
          <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="58.40004882812502" text="delete" />
       </columns>
    </TableView>
-   <TextField fx:id="customerField" layoutX="280.0" layoutY="305.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="quantityField" layoutX="156.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="customerField" layoutX="65.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="costField" layoutX="247.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="goodField" layoutX="338.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="workerField" layoutX="429.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="lawyerField" layoutX="520.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
+   <TextField fx:id="dateField" layoutX="611.0" layoutY="305.0" prefHeight="26.0" prefWidth="90.42" />
 </AnchorPane>

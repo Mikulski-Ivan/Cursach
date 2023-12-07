@@ -174,6 +174,320 @@ public class DatabaseHandler {
             e.printStackTrace();
         }
     }
+
+    public MakerTable insertAndGetMakers(MakerTable makerTable) {
+        comandString = "INSERT INTO makers (makerFirm, reputation, yearsOfCooperation) VALUES (?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, makerTable.getMakerFirm());
+            prSt.setDouble(2, makerTable.getReputation());
+            prSt.setInt(3, makerTable.getYearsOfCooperation());
+            prSt.executeUpdate();
+
+            resSet=getMakerID(makerTable);
+            resSet.next();
+            makerTable.setIdMakers(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return makerTable;
+    }
+
+    public WorkerTable insertAndGetWorkers(WorkerTable workerTable) {
+        comandString = "INSERT INTO workers (FIO, address, workerPosition, salary, rating, phone, experience) VALUES (?,?,?,?,?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, workerTable.getFIO());
+            prSt.setString(2, workerTable.getAddress());
+            prSt.setString(3, workerTable.getWorkerPosition());
+            prSt.setDouble(4, workerTable.getSalary());
+            prSt.setDouble(5, workerTable.getRating());
+            prSt.setString(6, workerTable.getPhone());
+            prSt.setInt(7, workerTable.getExperience());
+            prSt.executeUpdate();
+
+            resSet=getWorkerID(workerTable);
+            resSet.next();
+            workerTable.setIdWorkers(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return workerTable;
+    }
+
+    public ContractTable insertAndGetContracts(ContractTable contractTable) {
+        comandString = "INSERT INTO contracts (customer, quantity, totalCost, idGood, idWorker, idLawyer, dateOfSale) VALUES (?,?,?,?,?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, contractTable.getCustomer());
+            prSt.setInt(2, contractTable.getQuantity());
+            prSt.setDouble(3, contractTable.getTotalCost());
+            prSt.setInt(4, contractTable.getIdGood());
+            prSt.setInt(5, contractTable.getIdWorker());
+            prSt.setInt(6, contractTable.getIdLawyer());
+            prSt.setDate(7, contractTable.getDateOfSale());
+            prSt.executeUpdate();
+
+            resSet=getContractID(contractTable);
+            resSet.next();
+            contractTable.setIdContracts(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return contractTable;
+    }
+
+    public GoodTable insertAndGetGoods(GoodTable goodTable) {
+        comandString = "INSERT INTO goods (goodsName, costPerPiece, idMaker, leftInStock) VALUES (?,?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, goodTable.getGoodsName());
+            prSt.setDouble(2, goodTable.getCostPerPiece());
+            prSt.setInt(3, goodTable.getIdMaker());
+            prSt.setInt(4, goodTable.getLeftInStock());
+            prSt.executeUpdate();
+
+            resSet=getGoodID(goodTable);
+            resSet.next();
+            goodTable.setIdGoods(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return goodTable;
+    }
+
+    public LawyerTable insertAndGetLawyers(LawyerTable lawyerTable) {
+        comandString = "INSERT INTO lawyers (FIO, phone, idLawFirm, yearsOfCooperation) VALUES (?,?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawyerTable.getFIO());
+            prSt.setString(2, lawyerTable.getPhone());
+            prSt.setInt(3, lawyerTable.getIdLawFirm());
+            prSt.setInt(4, lawyerTable.getYearsOfCooperation());
+            prSt.executeUpdate();
+
+            resSet=getLawyerID(lawyerTable);
+            resSet.next();
+            lawyerTable.setIdLawyers(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return lawyerTable;
+    }
+
+    public LawfirmTable insertAndGetLawfirms(LawfirmTable lawfirmTable) {
+        comandString = "INSERT INTO lawfirms (firmName, phone, address) VALUES (?,?,?)";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawfirmTable.getFirmName());
+            prSt.setString(2, lawfirmTable.getPhone());
+            prSt.setString(3, lawfirmTable.getAddress());
+            prSt.executeUpdate();
+
+            resSet=getLawfirmID(lawfirmTable);
+            resSet.next();
+            lawfirmTable.setIdLawFirms(resSet.getInt(1));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return lawfirmTable;
+    }
+
+    public void updateMaker(MakerTable makerTable) {
+        System.out.println(makerTable);
+        comandString = "UPDATE "+Tables.MAKERS.getTitle()+" SET makerFirm=?, reputation=?, yearsOfCooperation=? WHERE idMakers=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, makerTable.getMakerFirm());
+            prSt.setString(2, String.valueOf(makerTable.getReputation()));
+            prSt.setString(3, String.valueOf(makerTable.getYearsOfCooperation()));
+            prSt.setString(4, String.valueOf(makerTable.getIdMakers()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateWorker(WorkerTable workerTable) {
+        System.out.println(workerTable);
+        comandString = "UPDATE "+Tables.WORKERS.getTitle()+" SET FIO=?, address=?, workerPosition=?, salary=?, rating=?, phone=?, experience=? WHERE idWorkers=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, workerTable.getFIO());
+            prSt.setString(2, workerTable.getAddress());
+            prSt.setString(3, workerTable.getWorkerPosition());
+            prSt.setString(4, String.valueOf(workerTable.getSalary()));
+            prSt.setString(5, String.valueOf(workerTable.getRating()));
+            prSt.setString(6, workerTable.getPhone());
+            prSt.setString(7, String.valueOf(workerTable.getExperience()));
+            prSt.setString(8, String.valueOf(workerTable.getIdWorkers()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateContract(ContractTable contractTable) {
+        System.out.println(contractTable);
+        comandString = "UPDATE "+Tables.CONTRACTS.getTitle()+" SET customer=?, quantity=?, totalCost=?, idGood=?, idWorker=?, idLawyer=?, dateOfSale=? WHERE idContracts=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, contractTable.getCustomer());
+            prSt.setString(2, String.valueOf(contractTable.getQuantity()));
+            prSt.setString(3, String.valueOf(contractTable.getTotalCost()));
+            prSt.setString(4, String.valueOf(contractTable.getIdGood()));
+            prSt.setString(5, String.valueOf(contractTable.getIdWorker()));
+            prSt.setString(6, String.valueOf(contractTable.getIdLawyer()));
+            prSt.setString(7, String.valueOf(contractTable.getDateOfSale()));
+            prSt.setString(8, String.valueOf(contractTable.getIdContracts()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateGood(GoodTable goodTable) {
+        System.out.println(goodTable);
+        comandString = "UPDATE "+Tables.GOODS.getTitle()+" SET goodsName=?, costPerPiece=?, idMaker=?, leftInStock=? WHERE idGoods=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, goodTable.getGoodsName());
+            prSt.setString(2, String.valueOf(goodTable.getCostPerPiece()));
+            prSt.setString(3, String.valueOf(goodTable.getIdMaker()));
+            prSt.setString(4, String.valueOf(goodTable.getLeftInStock()));
+            prSt.setString(5, String.valueOf(goodTable.getIdGoods()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateLawyer(LawyerTable lawyerTable) {
+        System.out.println(lawyerTable);
+        comandString = "UPDATE "+Tables.LAWYERS.getTitle()+" SET FIO=?, phone=?, idLawFirm=?, yearsOfCooperation=? WHERE idLawyers=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawyerTable.getFIO());
+            prSt.setString(2, String.valueOf(lawyerTable.getPhone()));
+            prSt.setString(3, String.valueOf(lawyerTable.getIdLawFirm()));
+            prSt.setString(4, String.valueOf(lawyerTable.getYearsOfCooperation()));
+            prSt.setString(5, String.valueOf(lawyerTable.getIdLawyers()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateLawfirm(LawfirmTable lawfirmTable) {
+        System.out.println(lawfirmTable);
+        comandString = "UPDATE "+Tables.LAWFIRMS.getTitle()+" SET firmName=?, phone=?, address=? WHERE idLawFirms=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawfirmTable.getFirmName());
+            prSt.setString(2, String.valueOf(lawfirmTable.getPhone()));
+            prSt.setString(3, String.valueOf(lawfirmTable.getAddress()));
+            prSt.setString(4, String.valueOf(lawfirmTable.getIdLawFirms()));
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ResultSet getMakerID(MakerTable makerTable) {
+        comandString="SELECT * FROM makers WHERE makerFirm=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, makerTable.getMakerFirm());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    private ResultSet getWorkerID(WorkerTable workerTable) {
+        comandString="SELECT * FROM workers WHERE FIO=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, workerTable.getFIO());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    private ResultSet getContractID(ContractTable contractTable) {
+        comandString="SELECT * FROM contracts WHERE customer=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, contractTable.getCustomer());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+    private ResultSet getGoodID(GoodTable goodTable) {
+        comandString="SELECT * FROM goods WHERE goodsName=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, goodTable.getGoodsName());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    private ResultSet getLawyerID(LawyerTable lawyerTable) {
+        comandString="SELECT * FROM lawyers WHERE FIO=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawyerTable.getFIO());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    private ResultSet getLawfirmID(LawfirmTable lawfirmTable) {
+        comandString="SELECT * FROM lawfirms WHERE firmName=?";
+        try {
+            prSt = getDbConnection().prepareStatement(comandString);
+            prSt.setString(1, lawfirmTable.getFirmName());
+
+            resSet=prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
     /////////////////////////////////////
     ////////////////////////////////////
     ////////////////////////////////////
